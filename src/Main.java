@@ -32,7 +32,7 @@ public class Main {
                         System.out.println("Incorrect! The number is greater than :" + num);
                     }
                 }
-                System.out.println("you lose! Try Again");
+
                 break;
 
             case 2 :
@@ -51,7 +51,7 @@ public class Main {
                         System.out.println("Incorrect! The number is greater than :" + num);
                     }
                 }
-                System.out.println("you lose! Try Again");
+
                 break;
             case 3 :
                 System.out.println("Great! You have selected the Hard difficulty level.\n" +
@@ -69,7 +69,7 @@ public class Main {
                         System.out.println("Incorrect! The number is greater than :" + num);
                     }
                 }
-                System.out.println("you lose! Try Again");
+
                 break;
         }
     }
