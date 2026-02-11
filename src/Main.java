@@ -1,13 +1,76 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-  //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-  // to see how IntelliJ IDEA suggests fixing it.
-  IO.println(String.format("Hello and welcome!"));
+import java.util.Scanner;
 
-  for (int i = 1; i <= 5; i++) {
-    //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-    // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-    IO.println("i = " + i);
-  }
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Welcome to the Number Guessing Game!\n" +
+                "I'm thinking of a number between 1 and 100.");
+        int num1 = (int)(Math.random()*101);
+        System.out.println("Please select the difficulty level:\n" +
+                "1. Easy (10 chances)\n" +
+                "2. Medium (5 chances)\n" +
+                "3. Hard (3 chances)\n");
+        System.out.print("Enter your choice:");
+        int choice = s.nextInt();
+
+
+        switch(choice){
+            case 1 :
+                System.out.println("Great! You have selected the Easy difficulty level.\n" +
+                        "Let's start the game!");
+
+                for(int i = 1 ; i < 11 ; i++){
+                    System.out.print("Enter your guess:");
+                    int num = s.nextInt();
+                    if(num == num1 ){
+                        System.out.println("Congratulations! You guessed the correct number in  "+ i +"  attempts");
+                        break;
+                    }else if(num > num1){
+                        System.out.println("Incorrect! The number is less than : " + num);
+                    }else {
+                        System.out.println("Incorrect! The number is greater than :" + num);
+                    }
+                }
+                System.out.println("you lose! Try Again");
+                break;
+
+            case 2 :
+                System.out.println("Great! You have selected the Medium difficulty level.\n" +
+                        "Let's start the game!");
+
+                for(int i = 1 ; i < 6 ; i++){
+                    System.out.print("Enter your guess:");
+                    int num = s.nextInt();
+                    if(num == num1 ){
+                        System.out.println("Congratulations! You guessed the correct number in  "+ i + " attempts");
+                        break;
+                    }else if(num > num1){
+                        System.out.println("Incorrect! The number is less than : " + num);
+                    }else {
+                        System.out.println("Incorrect! The number is greater than :" + num);
+                    }
+                }
+                System.out.println("you lose! Try Again");
+                break;
+            case 3 :
+                System.out.println("Great! You have selected the Hard difficulty level.\n" +
+                        "Let's start the game!");
+
+                for(int i = 1 ; i < 4 ; i++){
+                    System.out.print("Enter your guess:");
+                    int num = s.nextInt();
+                    if(num == num1 ){
+                        System.out.println("Congratulations! You guessed the correct number in  "+ i +"  attempts");
+                        break;
+                    }else if(num > num1){
+                        System.out.println("Incorrect! The number is less than : " + num);
+                    }else {
+                        System.out.println("Incorrect! The number is greater than :" + num);
+                    }
+                }
+                System.out.println("you lose! Try Again");
+                break;
+        }
+    }
 }
